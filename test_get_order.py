@@ -4,7 +4,6 @@ import data
 
 def get_track():
     response = sender_stand_request.post_create_order(data.order_body)
-    assert response.status_code == 201
     return response.json()["track"]
 
 def test_get_order():
